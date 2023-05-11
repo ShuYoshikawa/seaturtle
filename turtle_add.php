@@ -6,7 +6,7 @@
     </head>
     <body>
         <br/>
-        <form method="post"action="turtle_add_done.php">
+        <form method="post"action="turtle_add_check.php">
             日付<br/>
             <input type="date"name="date"style="width:200px"><br/>
             調査<br/>
@@ -31,8 +31,7 @@
             <input type="member"name="member"style="width:200px"><br/>
             <br/>
             <input type="button"onclick="history.back()"value="戻る">
-            <input type="submit"value="OK">
-        
+            <input type="submit"value="OK">        
 
         </form>
     </body>

@@ -50,44 +50,12 @@
             $data[]=$turtle_place;
             $data[]=$turtle_remarks;
             $data[]=$turtle_member;
+            $stmt->execute($data);
+
 
             $dbh=null;
             
-            print'日付: ';
-            print$turtle_date;
-            print'<br/>';
-            print'調査: ';
-            print$turtle_research;
-            print'<br/>';
-            print'ウミガメの種類: ';
-            print$turtle_type;
-            print'<br/>';
-            print'SCL: ';
-            print$turtle_scl;
-            print'<br/>';
-            print'MCL: ';
-            print$turtle_mcl;
-            print'<br/>';
-            print'SCW: ';
-            print$turtle_scw;
-            print'<br/>';
-            print'状態: ';
-            print$turtle_state;
-            print'<br/>';
-            print'タグ番号: ';
-            print$turtle_tag;
-            print'<br/>';
-            print'場所: ';
-            print$turtle_place;
-            print'<br/>';
-            print'備考: ';
-            print$turtle_remarks;
-            print'<br/>';
-            print'調査メンバー: ';
-            print$turtle_member;
-            print'<br/>';
-            print'この内容で追加します';
-            print'<br/>';
+           print'データを追加しました。<br/>';
         
         }
         catch(Exception $e)
@@ -101,3 +69,6 @@
               
     </body>
 </html>
+
+
+
