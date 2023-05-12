@@ -40,9 +40,9 @@
         $password = '';
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = 'UPDATE turtle date=?,research=?,type=?,scl=?,mcl=?,scw=?,state=?,tag=?,place=?,remarks=?,member=? WHERE code=?';
+
+        $sql = 'UPDATE turtle SET date=?,research=?,type=?,scl=?,mcl=?,scw=?,state=?,tag=?,place=?,remarks=?,member=? WHERE code=?';
         $stmt = $dbh->prepare($sql);
-        $code[] = $turtle_code;
         $data[] = $turtle_date;
         $data[] = $turtle_research;
         $data[] = $turtle_type;
@@ -54,10 +54,14 @@
         $data[] = $turtle_place;
         $data[] = $turtle_remarks;
         $data[] = $turtle_member;
+        $data[] = $turtle_code;
 
+
+        $stmt->execute($data);
+    
         $dbh = null;
  
-        print '<br/>';
+    
     } catch (Exception $e) {
         print 'エラーが起きています';
         exit();
