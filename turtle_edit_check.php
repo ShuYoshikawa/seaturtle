@@ -73,8 +73,6 @@
     print 'この内容であってますか？あってたら修正します。';
     print '<br/>';
 
-
-
     print '<form method="post"action="turtle_edit_done.php">';
     print '<input type="hidden"name="code"value="' .$turtle_code. '">';
     print'<input type="hidden"name="date"value="'.$turtle_date.'">';

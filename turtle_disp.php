@@ -44,7 +44,17 @@
 
     情報参照<br />
     <br />
-    <?php print $turtle_date;?>
+    <?php print $turtle_date;?><br/>
+    <?php print $turtle_research;?><br/>
+    <?php print $turtle_type;?><br/>
+    <?php print $turtle_scl;?><br/>
+    <?php print $turtle_mcl;?><br/>
+    <?php print $turtle_scw;?><br/>
+    <?php print $turtle_state;?><br/>
+    <?php print $turtle_tag;?><br/>
+    <?php print $turtle_place;?><br/>
+    <?php print $turtle_remarks;?><br/>
+    <?php print $turtle_member;?><br/>
     
     <input type="button" onclick="history.back()" value="戻る">
     </form>

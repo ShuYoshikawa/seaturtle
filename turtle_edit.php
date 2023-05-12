@@ -46,21 +46,21 @@
     <br />
     <form method="post" action="turtle_edit_check.php">
         <input type="hidden" name="code" value="<?php print $turtle_code; ?>">
-  
-    <input type="text" name="date" style="width:200px" value="<?php print $turtle_date; ?>"><br />
-    <input type="text" name="research" style="width:200px" value="<?php print $turtle_research; ?>"><br />
-    <input type="text" name="type" style="width:200px" value="<?php print $turtle_type; ?>"><br />
-    <input type="text" name="scl" style="width:200px" value="<?php print $turtle_scl; ?>"><br />
-    <input type="text" name="mcl" style="width:200px" value="<?php print $turtle_mcl; ?>"><br />
-    <input type="text" name="scw" style="width:200px" value="<?php print $turtle_scw; ?>"><br />
-    <input type="text" name="state" style="width:200px" value="<?php print $turtle_state; ?>"><br />
-    <input type="text" name="tag" style="width:200px" value="<?php print $turtle_tag; ?>"><br />
-    <input type="text" name="place" style="width:200px" value="<?php print $turtle_place; ?>"><br />
-    <input type="text" name="remarks" style="width:200px" value="<?php print $turtle_remarks; ?>"><br />
-    <input type="text" name="member" style="width:200px" value="<?php print $turtle_member; ?>"><br />
 
-    <input type="button" onclick="history.back()" value="戻る">
-    <input type="submit" value="OK">
+        <input type="text" name="date" style="width:200px" value="<?php print $turtle_date; ?>"><br />
+        <input type="text" name="research" style="width:200px" value="<?php print $turtle_research; ?>"><br />
+        <input type="text" name="type" style="width:200px" value="<?php print $turtle_type; ?>"><br />
+        <input type="text" name="scl" style="width:200px" value="<?php print $turtle_scl; ?>"><br />
+        <input type="text" name="mcl" style="width:200px" value="<?php print $turtle_mcl; ?>"><br />
+        <input type="text" name="scw" style="width:200px" value="<?php print $turtle_scw; ?>"><br />
+        <input type="text" name="state" style="width:200px" value="<?php print $turtle_state; ?>"><br />
+        <input type="text" name="tag" style="width:200px" value="<?php print $turtle_tag; ?>"><br />
+        <input type="text" name="place" style="width:200px" value="<?php print $turtle_place; ?>"><br />
+        <input type="text" name="remarks" style="width:200px" value="<?php print $turtle_remarks; ?>"><br />
+        <input type="text" name="member" style="width:200px" value="<?php print $turtle_member; ?>"><br />
+
+        <input type="button" onclick="history.back()" value="戻る">
+        <input type="submit" value="OK">
     </form>
 </body>
 

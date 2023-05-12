@@ -35,17 +35,18 @@
             }
 
             print '<input type="radio"name="turtlecode"value="' . $rec['code'] . '">';
-            print $rec['date'];
-            print $rec['research'];
-            print $rec['type'];
-            print $rec['scl'];
-            print $rec['mcl'];
-            print $rec['scw'];
-            print $rec['state'];
-            print $rec['tag'];
-            print $rec['place'];
-            print $rec['remarks'];
-            print $rec['member'];
+            
+            print'日付:';print $rec['date'];
+            print'調査種類:';print $rec['research'];
+            print'ウミガメの種類:'; print $rec['type'];
+            print'標準直甲長(SCL):'; print $rec['scl'];
+            print'最小直甲長(MCL):'; print $rec['mcl'];
+            print'標準直甲幅(SCW):'; print $rec['scw'];
+            print'状態:'; print $rec['state'];
+            print'タグ番号:'; print $rec['tag'];
+            print'場所:'; print $rec['place'];
+            print'備考:'; print $rec['remarks'];
+            print'調査メンバー:';print $rec['member'];
 
             print '<br/>';
         }
