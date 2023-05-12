@@ -67,7 +67,7 @@
     修正しました<br />
     <br />
 
-    <a href="staff_list.php">戻る</a>
+    <a href="turtle_list.php">戻る</a>
 
 </body>
 

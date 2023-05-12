@@ -47,7 +47,6 @@
             print $rec['remarks'];
             print $rec['member'];
 
-
             print'<br/>';
            }
 
@@ -62,8 +61,6 @@
         }
         ?>
 
-    
-              
     </body>
 </html>
 

@@ -9,7 +9,7 @@
 <body>
     <?php
     try {
-        $turtle_code = $_POST['turtlecode'];
+        $turtle_code = $_GET['turtlecode'];
 
         $dsn = 'mysql:dbname=seaturtle;host=localhost;charset=utf8';
         $user = 'root';
