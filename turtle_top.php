@@ -6,8 +6,7 @@
     <title>Engineer-Management</title>
     <style>
         div {
-            background-color: rgb(0, 200, 0);
-            color: white;
+            background-color: rgb(100, 255, 255);
             padding: 30px 30px 30px 30px;
         }
     </style>
@@ -15,7 +14,7 @@
 
 <body>
 
-    <div>Engineer-Management</div>
+    <div>ウミガメデータベース</div>
     <br />
     <br />
 
