@@ -35,7 +35,6 @@
         $turtle_remarks = $rec['remarks'];
         $turtle_member = $rec['member'];
 
-
         $dbh = null;
     } catch (Exception $e) {
         print 'エラーが起きています';
@@ -47,7 +46,7 @@
     <br />
     <form method="post" action="turtle_edit_check.php">
         <input type="hidden" name="code" value="<?php print $turtle_code; ?>">
-    </form>
+  
     <input type="text" name="date" style="width:200px" value="<?php print $turtle_date; ?>"><br />
     <input type="text" name="research" style="width:200px" value="<?php print $turtle_research; ?>"><br />
     <input type="text" name="type" style="width:200px" value="<?php print $turtle_type; ?>"><br />

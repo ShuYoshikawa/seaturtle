@@ -24,7 +24,7 @@
            print'ウミガメ一覧<br/><br/>';
            
            
-           print'<form method="post"action="turtle_edit.php">';
+           print'<form method="post"action="turtle_branch.php">';
            
            while(true)
            {
@@ -51,7 +51,8 @@
             print'<br/>';
            }
 
-        print'<input type="submit"value="修正">';
+        print'<input type="submit"name="edit" value="修正">';
+        print'<input type="submit"name="delete"value="削除">';
         print'<br/>';
         }
         catch(Exception $e)
