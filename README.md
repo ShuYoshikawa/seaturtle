@@ -35,3 +35,6 @@
 ### データベース
 ![データベース](https://github.com/ShuYoshikawa/seaturtle/assets/125488173/d9aea7fd-cf17-464d-b30f-5f86180f23b8)
 
+## 今後の予定
+- デプロイする
+
