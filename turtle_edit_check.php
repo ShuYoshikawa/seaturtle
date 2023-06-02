@@ -19,6 +19,9 @@
     $turtle_scw = $_POST['scw'];
     $turtle_state = $_POST['state'];
     $turtle_tag = $_POST['tag'];
+    $turtle_tag = $_POST['tag2'];
+    $turtle_tag = $_POST['tag3'];
+    $turtle_tag = $_POST['tag4'];
     $turtle_place = $_POST['place'];
     $turtle_remarks = $_POST['remarks'];
     $turtle_member = $_POST['member'];
@@ -31,6 +34,9 @@
     $turtle_scw=htmlspecialchars($turtle_scw,ENT_QUOTES,'UTF-8');
     $turtle_state=htmlspecialchars($turtle_state,ENT_QUOTES,'UTF-8');
     $turtle_tag=htmlspecialchars($turtle_tag,ENT_QUOTES,'UTF-8');
+    $turtle_tag2=htmlspecialchars($turtle_tag2,ENT_QUOTES,'UTF-8');
+    $turtle_tag3=htmlspecialchars($turtle_tag3,ENT_QUOTES,'UTF-8');
+    $turtle_tag4=htmlspecialchars($turtle_tag4,ENT_QUOTES,'UTF-8');
     $turtle_place=htmlspecialchars($turtle_place,ENT_QUOTES,'UTF-8');
     $turtle_remarks=htmlspecialchars($turtle_remarks,ENT_QUOTES,'UTF-8');
     $turtle_member=htmlspecialchars($turtle_member,ENT_QUOTES,'UTF-8');
@@ -58,7 +64,16 @@
     print '状態: ';
     print $turtle_state;
     print '<br/>';
-    print 'タグ番号: ';
+    print 'タグ番号<前足(左)>: ';
+    print $turtle_tag;
+    print '<br/>';
+    print 'タグ番号<前足(右)>: ';
+    print $turtle_tag;
+    print '<br/>';
+    print 'タグ番号<後ろ足(左)>: ';
+    print $turtle_tag;
+    print '<br/>';
+    print 'タグ番号<後ろ足(右)>: ';
     print $turtle_tag;
     print '<br/>';
     print '場所: ';
@@ -83,6 +98,9 @@
     print'<input type="hidden"name="scw"value="'.$turtle_scw.'">';
     print'<input type="hidden"name="state"value="'.$turtle_state.'">';
     print'<input type="hidden"name="tag"value="'.$turtle_tag.'">';
+    print'<input type="hidden"name="tag2"value="'.$turtle_tag2.'">';
+    print'<input type="hidden"name="tag3"value="'.$turtle_tag3.'">';
+    print'<input type="hidden"name="tag4"value="'.$turtle_tag4.'">';
     print'<input type="hidden"name="place"value="'.$turtle_place.'">';
     print'<input type="hidden"name="remarks"value="'.$turtle_remarks.'">';
     print'<input type="hidden"name="member"value="'.$turtle_member.'">';

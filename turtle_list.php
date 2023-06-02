@@ -16,7 +16,7 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT code,date,research,type,scl,mcl,scw,state,tag,place,remarks,member FROM turtle WHERE 1';
+        $sql = 'SELECT code,date,research,type,scl,mcl,scw,state,tag,tag2,tag3,tag4,place,remarks,member FROM turtle WHERE 1';
         $stmt = $dbh->prepare($sql);
         $stmt->execute();
 
@@ -50,8 +50,14 @@
             print $rec['scw'];
             print '状態:';
             print $rec['state'];
-            print 'タグ番号:';
+            print 'タグ番号<前足(左)>:';
             print $rec['tag'];
+            print 'タグ番号<前足(右)>:';
+            print $rec['tag2'];
+            print 'タグ番号<後ろ足(左)>:';
+            print $rec['tag3'];
+            print 'タグ番号<後ろ足(右)>:';
+            print $rec['tag4'];
             print '場所:';
             print $rec['place'];
             print '備考:';

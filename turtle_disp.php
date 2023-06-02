@@ -17,7 +17,7 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT code,date,research,type,scl,mcl,scw,state,tag,place,remarks,member FROM turtle WHERE code=?';
+        $sql = 'SELECT code,date,research,type,scl,mcl,scw,state,tag,tag2,tag3,tag4,place,remarks,member FROM turtle WHERE code=?';
         $stmt = $dbh->prepare($sql);
         $data[] = $turtle_code;
         $stmt->execute($data);
@@ -31,6 +31,9 @@
         $turtle_scw = $rec['scw'];
         $turtle_state = $rec['state'];
         $turtle_tag = $rec['tag'];
+        $turtle_tag2 = $rec['tag2'];
+        $turtle_tag3 = $rec['tag3'];
+        $turtle_tag4 = $rec['tag4'];
         $turtle_place = $rec['place'];
         $turtle_remarks = $rec['remarks'];
         $turtle_member = $rec['member'];
@@ -52,6 +55,9 @@
     <?php print $turtle_scw;?><br/>
     <?php print $turtle_state;?><br/>
     <?php print $turtle_tag;?><br/>
+    <?php print $turtle_tag2;?><br/>
+    <?php print $turtle_tag3;?><br/>
+    <?php print $turtle_tag4;?><br/>
     <?php print $turtle_place;?><br/>
     <?php print $turtle_remarks;?><br/>
     <?php print $turtle_member;?><br/>

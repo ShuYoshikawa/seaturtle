@@ -21,8 +21,14 @@
             <input type="SCW"name="scw"style="width:200px"><br/>
             状態<br/>
             <input type="state"name="state"style="width:200px"><br/>
-            タグ番号<br/>
+            タグ番号＜前足（左）＞<br/>
             <input type="tag"name="tag"style="width:200px"><br/>
+            タグ番号＜前足（右）＞<br/>
+            <input type="tag2"name="tag2"style="width:200px"><br/>
+            タグ番号＜後ろ足（左）＞<br/>
+            <input type="tag3"name="tag3"style="width:200px"><br/>
+            タグ番号＜後ろ足（右）＞<br/>
+            <input type="tag4"name="tag4"style="width:200px"><br/>
             場所<br/>
             <input type="place"name="place"style="width:200px"><br/>
             備考<br/>

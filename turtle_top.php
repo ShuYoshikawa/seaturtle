@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Engineer-Management</title>
+    <title>ウミガメDB</title>
     <style>
         div {
             background-color: rgb(100, 255, 255);

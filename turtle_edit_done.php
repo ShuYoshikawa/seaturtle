@@ -18,6 +18,9 @@
         $turtle_scw = $_POST['scw'];
         $turtle_state = $_POST['state'];
         $turtle_tag = $_POST['tag'];
+        $turtle_tag2 = $_POST['tag2'];
+        $turtle_tag3 = $_POST['tag3'];
+        $turtle_tag4 = $_POST['tag4'];
         $turtle_place = $_POST['place'];
         $turtle_remarks = $_POST['remarks'];
         $turtle_member = $_POST['member'];
@@ -31,6 +34,9 @@
         $turtle_scw = htmlspecialchars($turtle_scw, ENT_QUOTES, 'UTF-8');
         $turtle_state = htmlspecialchars($turtle_state, ENT_QUOTES, 'UTF-8');
         $turtle_tag = htmlspecialchars($turtle_tag, ENT_QUOTES, 'UTF-8');
+        $turtle_tag2 = htmlspecialchars($turtle_tag2, ENT_QUOTES, 'UTF-8');
+        $turtle_tag3 = htmlspecialchars($turtle_tag3, ENT_QUOTES, 'UTF-8');
+        $turtle_tag4 = htmlspecialchars($turtle_tag4, ENT_QUOTES, 'UTF-8');
         $turtle_place = htmlspecialchars($turtle_place, ENT_QUOTES, 'UTF-8');
         $turtle_remarks = htmlspecialchars($turtle_remarks, ENT_QUOTES, 'UTF-8');
         $turtle_member = htmlspecialchars($turtle_member, ENT_QUOTES, 'UTF-8');
@@ -41,7 +47,7 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'UPDATE turtle SET date=?,research=?,type=?,scl=?,mcl=?,scw=?,state=?,tag=?,place=?,remarks=?,member=? WHERE code=?';
+        $sql = 'UPDATE turtle SET date=?,research=?,type=?,scl=?,mcl=?,scw=?,state=?,tag=?,tag2=?,tag3=?,tag4=?,place=?,remarks=?,member=? WHERE code=?';
         $stmt = $dbh->prepare($sql);
         $data[] = $turtle_date;
         $data[] = $turtle_research;
@@ -51,6 +57,9 @@
         $data[] = $turtle_scw;
         $data[] = $turtle_state;
         $data[] = $turtle_tag;
+        $data[] = $turtle_tag2;
+        $data[] = $turtle_tag3;
+        $data[] = $turtle_tag4;
         $data[] = $turtle_place;
         $data[] = $turtle_remarks;
         $data[] = $turtle_member;
