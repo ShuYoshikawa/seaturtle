@@ -35,18 +35,29 @@
             }
 
             print '<input type="radio"name="turtlecode"value="' . $rec['code'] . '">';
-            
-            print'日付:';print $rec['date'];
-            print'調査種類:';print $rec['research'];
-            print'ウミガメの種類:'; print $rec['type'];
-            print'標準直甲長(SCL):'; print $rec['scl'];
-            print'最小直甲長(MCL):'; print $rec['mcl'];
-            print'標準直甲幅(SCW):'; print $rec['scw'];
-            print'状態:'; print $rec['state'];
-            print'タグ番号:'; print $rec['tag'];
-            print'場所:'; print $rec['place'];
-            print'備考:'; print $rec['remarks'];
-            print'調査メンバー:';print $rec['member'];
+
+            print '日付:';
+            print $rec['date'];
+            print '調査種類:';
+            print $rec['research'];
+            print 'ウミガメの種類:';
+            print $rec['type'];
+            print '標準直甲長(SCL):';
+            print $rec['scl'];
+            print '最小直甲長(MCL):';
+            print $rec['mcl'];
+            print '標準直甲幅(SCW):';
+            print $rec['scw'];
+            print '状態:';
+            print $rec['state'];
+            print 'タグ番号:';
+            print $rec['tag'];
+            print '場所:';
+            print $rec['place'];
+            print '備考:';
+            print $rec['remarks'];
+            print '調査メンバー:';
+            print $rec['member'];
 
             print '<br/>';
         }
@@ -54,12 +65,15 @@
         print '<input type="submit"name="disp" value="参照">';
         print '<input type="submit"name="edit" value="修正">';
         print '<input type="submit"name="delete"value="削除">';
+
         print '<br/>';
     } catch (Exception $e) {
         print 'エラーが起きています';
         exit();
     }
     ?>
+    <a href="turtle_top.php">トップメニューへ</a><br />
+
 
 </body>
 

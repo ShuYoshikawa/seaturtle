@@ -17,7 +17,7 @@
             <input type="SCL"name="scl"style="width:200px"><br/>
             最小直甲長(MCL)<br/>
             <input type="MCL"name="mcl"style="width:200px"><br/>
-            標準直甲長(SCW)<br/>
+            標準直甲幅(SCW)<br/>
             <input type="SCW"name="scw"style="width:200px"><br/>
             状態<br/>
             <input type="state"name="state"style="width:200px"><br/>
