@@ -42,12 +42,6 @@
             print $rec['research'];
             print 'ウミガメの種類:';
             print $rec['type'];
-            print '標準直甲長(SCL):';
-            print $rec['scl'];
-            print '最小直甲長(MCL):';
-            print $rec['mcl'];
-            print '標準直甲幅(SCW):';
-            print $rec['scw'];
             print '状態:';
             print $rec['state'];
             print 'タグ番号<前足(左)>:';
@@ -62,9 +56,7 @@
             print $rec['place'];
             print '備考:';
             print $rec['remarks'];
-            print '調査メンバー:';
-            print $rec['member'];
-
+            
             print '<br/>';
         }
 
