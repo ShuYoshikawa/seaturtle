@@ -4,11 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>ウミガメDB</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+        }
+
+        div {
+            background-color: rgb(100, 255, 255);
+            padding: 30px 30px 30px 30px;
+        }
+    </style>
 </head>
 
 <body>
+    <div>ウミガメ一覧</div><br />
     <?php
-    try {
+    
 
         $dsn = 'mysql:dbname=seaturtle;host=localhost;charset=utf8';
         $user = 'root';
@@ -19,54 +34,34 @@
         $sql = 'SELECT code,date,research,type,scl,mcl,scw,state,tag,tag2,tag3,tag4,place,remarks,member FROM turtle WHERE 1';
         $stmt = $dbh->prepare($sql);
         $stmt->execute();
-
-
         $dbh = null;
-
-        print 'ウミガメ一覧<br/><br/>';
-
+        $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
         print '<form method="post"action="turtle_branch.php">';
 
-        while (true) {
-            $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-            if ($rec == false) {
-                break;
+        if($rec!=false){
+            echo "<table><tr><th> </th><th>No</th><th>日付</th><th>調査名</th><th>種類</th><th>状態
+            </th><th>タグ番号(前足の左)</th><th>タグ番号(前足の右)</th><th>タグ番号(後足の左)</th><th>タグ番号(後足の右)</th><th>備考</th></tr>";
+            while ($rec = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                echo "<tr><td><a href='turtle_disp.php?turtlecode=" . $rec["code"] . "'>詳細</a></td>";
+                echo "<td>" . $rec["code"] . "</td>";
+                echo "<td>" . $rec["date"] . "</td>";
+                echo "<td>" . $rec["research"] . "</td>";
+                echo "<td>" . $rec["type"] . "</td>";
+                echo "<td>" . $rec["state"] . "</td>";
+                echo "<td>" . $rec["tag"] . "</td>";
+                echo "<td>" . $rec["tag2"] . "</td>";
+                echo "<td>" . $rec["tag3"] . "</td>";
+                echo "<td>" . $rec["tag3"] . "</td>";
+                echo "<td>" . $rec["remarks"] . "</td>";
+
+                echo "</td></tr>";
             }
-
-            print '<input type="radio"name="turtlecode"value="' . $rec['code'] . '">';
-
-            print '日付:';
-            print $rec['date'];
-            print '調査種類:';
-            print $rec['research'];
-            print 'ウミガメの種類:';
-            print $rec['type'];
-            print '状態:';
-            print $rec['state'];
-            print 'タグ番号<前足(左)>:';
-            print $rec['tag'];
-            print 'タグ番号<前足(右)>:';
-            print $rec['tag2'];
-            print 'タグ番号<後ろ足(左)>:';
-            print $rec['tag3'];
-            print 'タグ番号<後ろ足(右)>:';
-            print $rec['tag4'];
-            print '場所:';
-            print $rec['place'];
-            print '備考:';
-            print $rec['remarks'];
-            
-            print '<br/>';
+            echo "</table>";
+        } else {
+            echo "0 results";
         }
-
-        print '<input type="submit"name="disp" value="参照">';
-
-        print '<br/>';
-    } catch (Exception $e) {
-        print 'エラーが起きています';
-        exit();
-    }
+    
     ?>
     <a href="turtle_top.php">トップメニューへ</a><br />
 
