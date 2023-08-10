@@ -18,6 +18,8 @@
             $turtle_tag3=$_POST['tag3'];
             $turtle_tag4=$_POST['tag4'];
             $turtle_place=$_POST['place'];
+            $turtle_latitude=$_POST['latitude'];
+            $turtle_longitude=$_POST['longitude'];
             $turtle_remarks=$_POST['remarks'];
             $turtle_member=$_POST['member'];
 
@@ -33,6 +35,8 @@
             $turtle_tag3=htmlspecialchars($turtle_tag3,ENT_QUOTES,'UTF-8');
             $turtle_tag4=htmlspecialchars($turtle_tag4,ENT_QUOTES,'UTF-8');
             $turtle_place=htmlspecialchars($turtle_place,ENT_QUOTES,'UTF-8');
+            $turtle_latitude=htmlspecialchars($turtle_latitude,ENT_QUOTES,'UTF-8');
+            $turtle_longitude=htmlspecialchars($turtle_longitude,ENT_QUOTES,'UTF-8');
             $turtle_remarks=htmlspecialchars($turtle_remarks,ENT_QUOTES,'UTF-8');
             $turtle_member=htmlspecialchars($turtle_member,ENT_QUOTES,'UTF-8');
 
@@ -72,6 +76,12 @@
             print'場所: ';
             print$turtle_place;
             print'<br/>';
+            print'緯度 N: ';
+            print$turtle_latitude;
+            print'<br/>';
+            print'経度 E: ';
+            print$turtle_longitude;
+            print'<br/>';
             print'備考: ';
             print$turtle_remarks;
             print'<br/>';
@@ -96,6 +106,8 @@
             print'<input type="hidden"name="tag3"value="'.$turtle_tag3.'">';
             print'<input type="hidden"name="tag4"value="'.$turtle_tag4.'">';
             print'<input type="hidden"name="place"value="'.$turtle_place.'">';
+            print'<input type="hidden"name="latitude"value="'.$turtle_latitude.'">';
+            print'<input type="hidden"name="longitude"value="'.$turtle_longitude.'">';
             print'<input type="hidden"name="remarks"value="'.$turtle_remarks.'">';
             print'<input type="hidden"name="member"value="'.$turtle_member.'">';
             

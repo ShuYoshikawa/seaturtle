@@ -31,6 +31,10 @@
             <input type="tag4"name="tag4"style="width:200px"><br/>
             場所<br/>
             <input type="place"name="place"style="width:200px"><br/>
+            緯度 N<br/>
+            <input type="latitude"name="latitude"style="width:200px"><br/>
+            経度 E<br/>
+            <input type="longitude"name="longitude"style="width:200px"><br/>
             備考<br/>
             <input type="remarks"name="remarks"style="width:200px"><br/>
             メンバー<br/>

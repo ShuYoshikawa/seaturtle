@@ -23,45 +23,43 @@
 <body>
     <div>ウミガメ一覧</div><br />
     <?php
-    
 
-        $dsn = 'mysql:dbname=seaturtle;host=localhost;charset=utf8';
-        $user = 'root';
-        $password = '';
-        $dbh = new PDO($dsn, $user, $password);
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT code,date,research,type,scl,mcl,scw,state,tag,tag2,tag3,tag4,place,remarks,member FROM turtle WHERE 1';
-        $stmt = $dbh->prepare($sql);
-        $stmt->execute();
-        $dbh = null;
-        $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+    $dsn = 'mysql:dbname=seaturtle;host=localhost;charset=utf8';
+    $user = 'root';
+    $password = '';
+    $dbh = new PDO($dsn, $user, $password);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        print '<form method="post"action="turtle_branch.php">';
+    $sql = 'SELECT code,date,research,type,scl,mcl,scw,state,tag,tag2,tag3,tag4,place,remarks,latitude,longitude,member FROM turtle WHERE 1';
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $dbh = null;
+    $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if($rec!=false){
-            echo "<table><tr><th> </th><th>No</th><th>日付</th><th>調査名</th><th>種類</th><th>状態
-            </th><th>タグ番号(前足の左)</th><th>タグ番号(前足の右)</th><th>タグ番号(後足の左)</th><th>タグ番号(後足の右)</th><th>備考</th></tr>";
-            while ($rec = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                echo "<tr><td><a href='turtle_disp.php?turtlecode=" . $rec["code"] . "'>詳細</a></td>";
-                echo "<td>" . $rec["code"] . "</td>";
-                echo "<td>" . $rec["date"] . "</td>";
-                echo "<td>" . $rec["research"] . "</td>";
-                echo "<td>" . $rec["type"] . "</td>";
-                echo "<td>" . $rec["state"] . "</td>";
-                echo "<td>" . $rec["tag"] . "</td>";
-                echo "<td>" . $rec["tag2"] . "</td>";
-                echo "<td>" . $rec["tag3"] . "</td>";
-                echo "<td>" . $rec["tag3"] . "</td>";
-                echo "<td>" . $rec["remarks"] . "</td>";
+    print '<form method="post"action="turtle_branch.php">';
 
-                echo "</td></tr>";
-            }
-            echo "</table>";
-        } else {
-            echo "0 results";
+    if ($rec != false) {
+        echo "<table><tr><th> </th><th>No</th><th>日付</th><th>調査名</th><th>種類</th><th>タグ番号(前足の左)</th><th>タグ番号(前足の右)</th><th>タグ番号(後足の左)</th><th>タグ番号(後足の右)</th><th>備考</th></tr>";
+        while ($rec = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr><td><a href='turtle_disp.php?turtlecode=" . $rec["code"] . "'>詳細</a></td>";
+            echo "<td>" . $rec["code"] . "</td>";
+            echo "<td>" . $rec["date"] . "</td>";
+            echo "<td>" . $rec["research"] . "</td>";
+            echo "<td>" . $rec["type"] . "</td>";
+            echo "<td>" . $rec["tag"] . "</td>";
+            echo "<td>" . $rec["tag2"] . "</td>";
+            echo "<td>" . $rec["tag3"] . "</td>";
+            echo "<td>" . $rec["tag3"] . "</td>";
+            echo "<td>" . $rec["remarks"] . "</td>";
+
+            echo "</td></tr>";
         }
-    
+        echo "</table>";
+    } else {
+        echo "0 results";
+    }
+
     ?>
     <a href="turtle_top.php">トップメニューへ</a><br />
 
