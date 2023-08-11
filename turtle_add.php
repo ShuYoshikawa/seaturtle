@@ -9,7 +9,6 @@
 
 <body>
     
-    <div style="text-align:center">
     <br />
     <form method="post" action="turtle_add_check.php">
         日付<br />
@@ -58,7 +57,6 @@
         <input type="submit" value="OK">
 
     </form>
-    </div>
 </body>
 
 </html>
