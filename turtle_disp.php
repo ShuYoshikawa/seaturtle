@@ -49,21 +49,37 @@
 
     情報参照<br />
     <br />
+    調査日：
     <?php print $turtle_date;?><br/>
+    調査：
     <?php print $turtle_research;?><br/>
+    種類：
     <?php print $turtle_type;?><br/>
+    標準直甲長（SCL）：
     <?php print $turtle_scl;?><br/>
+    最小直甲長（MCL）：
     <?php print $turtle_mcl;?><br/>
+    標準直甲幅（SCW）：
     <?php print $turtle_scw;?><br/>
+    状態：
     <?php print $turtle_state;?><br/>
+    タグ番号（左前）：
     <?php print $turtle_tag;?><br/>
+    タグ番号（右前）：
     <?php print $turtle_tag2;?><br/>
+    タグ番号（左後ろ）：
     <?php print $turtle_tag3;?><br/>
+    タグ番号（右後ろ）：
     <?php print $turtle_tag4;?><br/>
+    調査場所：
     <?php print $turtle_place;?><br/>
+    緯度 N：
     <?php print $turtle_latitude;?><br/>
+    経度 E：
     <?php print $turtle_longitude;?><br/>
+    備考：
     <?php print $turtle_remarks;?><br/>
+    調査メンバー：
     <?php print $turtle_member;?><br/>
     
     <input type="button" onclick="history.back()" value="戻る">

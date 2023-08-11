@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>ウミガメDB</title>
     <style>
-
         div {
             background-color: rgb(100, 255, 255);
             padding: 30px 30px 30px 30px;
