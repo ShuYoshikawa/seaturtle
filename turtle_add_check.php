@@ -7,7 +7,7 @@
         <style>
             body{
                 margin:0;
-                font-faily:Arial,sans-serif;
+                font-family:Arial,sans-serif;
             }
 
            
