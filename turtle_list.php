@@ -3,8 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--Add viewport meta tag for responsiveness -->
     <title>ウミガメDB</title>
     <style>
+        body{
+            margin:0;
+            font-family:Arial,sans-serif;
+        }
+
+        @media(min-width:600px){
+            div{
+                background-color:rgb(100,255,255);
+                padding:30px;
+                text-align:center;
+            }
+
+
+        }
+
+        @media (max-width: 599px){
+            div{
+                background-color:rgb(100,255,255);
+                padding:15px;
+                text-align:center;
+            }
+        }
+
         table,
         td,
         th {
