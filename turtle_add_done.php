@@ -80,7 +80,7 @@
         }
         ?>
 
-        <a href="turtle_list.php">戻る</a>
+        <a href="turtle_list.php">完了</a>
               
     </body>
 </html>
