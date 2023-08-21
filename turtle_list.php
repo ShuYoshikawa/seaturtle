@@ -45,9 +45,8 @@
 </head>
 
 <body>
-    <div>ウミガメ一覧</div><br />
+    <div>ウミガメ一覧</div>
     <?php
-
 
     $dsn = 'mysql:dbname=seaturtle;host=localhost;charset=utf8';
     $user = 'root';
