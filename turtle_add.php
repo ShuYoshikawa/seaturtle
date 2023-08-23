@@ -87,7 +87,7 @@
         <input type="member" name="member"  placeholder="その日の調査メンバーは？"><br />
         <br />
         <button type="button" onclick="location.href='turtle_top.php'">戻る</button>
-        <button type="submit" onclick="location.href='turtle_add_done.php'">OK</button>
+        <input type="submit"value="次へ">
 
     </form>
 </body>
