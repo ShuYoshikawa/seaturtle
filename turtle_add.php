@@ -82,7 +82,7 @@
         経度 E<br />
         <input type="longitude" name="longitude"  placeholder="数字のみでお願いします"><br />
         備考<br />
-        <input type="remarks" name="remarks"  placeholder="メモ"><br />
+        <input type="remarks" name="remarks"><br />
         メンバー<br />
         <input type="member" name="member"  placeholder="その日の調査メンバーは？"><br />
         <br />

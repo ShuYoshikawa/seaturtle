@@ -44,7 +44,7 @@
 
             button {
                 background-color: white;
-                width: 80%;
+                width: 60%;
                 height: 40px;
                 display: block;
                 margin: 10px auto;
@@ -58,6 +58,8 @@
     <div>ウミガメデータベース</div>
 
     </br>
+    </br>
+    
 
     <button type="button" onclick="location.href='turtle_list.php'">一覧画面</button>
 
